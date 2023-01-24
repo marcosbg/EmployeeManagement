@@ -1,0 +1,14 @@
+--- 
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: employee-management-cluster
+  region: us-east-1
+  
+managedNodeGroups:
+  - name: ng1-managed
+    instanceType: t3.micro
+    minSize: 1
+    maxSize: 4
+    desiredCapacity: 3  
