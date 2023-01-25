@@ -24,6 +24,7 @@ phases:
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
+      - ./mvnw clean install
       - docker build -t $REPOSITORY_URI:$TAG .
 
   post_build:
